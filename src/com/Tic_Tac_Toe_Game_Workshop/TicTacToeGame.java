@@ -25,6 +25,11 @@ public class TicTacToeGame {
         resultDetermination();
         System.out.println("Check whether Computer winning of game or need to move turn.");
         computerDetermination();
+        System.out.println("Check whether the opponent Win r Play.");
+        if (checkOpponent())
+            System.out.println("Opponent win the game.");
+        else
+            System.out.println("Opponent has to play.");
     }
     public static void createBoard(Scanner scan, char[] board)
     {
@@ -96,4 +101,15 @@ public class TicTacToeGame {
         else
             System.out.println("Computer will take a turn.");
     }
+
+    public static void checkOpponent()
+    {
+        boolean check = true;
+        if(check) {
+            System.out.println("Check is true");
+        } else {
+            System.out.println("Check is false");
+        }
+    }
+
 }
