@@ -20,6 +20,7 @@ public class TicTacToeGame {
     }
         else
             System.out.println("Space is full.");
+        chooseUserComputer();
     }
     public static void createBoard(Scanner scan, char[] board)
     {
@@ -60,6 +61,15 @@ public class TicTacToeGame {
     public static boolean isSpaceFree(char[]board,int index)
     {
         return board[index]==' ';
+    }
+    public static void chooseUserComputer()
+    {
+        int isCheck = 1;
+        int empCheck = (int) Math.floor(Math.random()*10)%2;
+        if (isCheck == empCheck)
+            System.out.println("User will play the game.");
+        else
+            System.out.println("Computer will play the game.");
     }
 
 }
