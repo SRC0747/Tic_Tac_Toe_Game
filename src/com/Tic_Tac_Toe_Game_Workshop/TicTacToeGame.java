@@ -21,6 +21,8 @@ public class TicTacToeGame {
         else
             System.out.println("Space is full.");
         chooseUserComputer();
+        System.out.println("Check whether it is a tie or winning of game or need to move turn.");
+        resultDetermination();
     }
     public static void createBoard(Scanner scan, char[] board)
     {
@@ -71,5 +73,16 @@ public class TicTacToeGame {
         else
             System.out.println("Computer will play the game.");
     }
-
+    public static void resultDetermination()
+    {
+        int isWinner = 2;
+        int isTie = 1;
+        int empCheck = (int) Math.floor(Math.random()*10)%3;
+        if (isWinner == empCheck)
+            System.out.println("You are Winner.");
+        if (isTie == empCheck)
+            System.out.println("It is a Tie.");
+        else
+            System.out.println("Please change the turn.");
+    }
 }
