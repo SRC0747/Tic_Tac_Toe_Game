@@ -23,6 +23,8 @@ public class TicTacToeGame {
         chooseUserComputer();
         System.out.println("Check whether it is a tie or winning of game or need to move turn.");
         resultDetermination();
+        System.out.println("Check whether Computer winning of game or need to move turn.");
+        computerDetermination();
     }
     public static void createBoard(Scanner scan, char[] board)
     {
@@ -84,5 +86,14 @@ public class TicTacToeGame {
             System.out.println("It is a Tie.");
         else
             System.out.println("Please change the turn.");
+    }
+    public static void computerDetermination()
+    {
+        int isComputer = 1;
+        int empCheck = (int) Math.floor(Math.random()*10)%2;
+        if (isComputer == empCheck)
+            System.out.println("Computer will play the game.");
+        else
+            System.out.println("Computer will take a turn.");
     }
 }
