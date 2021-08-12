@@ -10,6 +10,8 @@ public class TicTacToeGame {
         createBoard(scan,board);
         System.out.println("Player choose X or O and decide if play the game or not.");
         playerComputer();
+        System.out.println("Displaying the current board.");
+        showBoard();
     }
     public static void createBoard(Scanner scan, char[] board)
     {
