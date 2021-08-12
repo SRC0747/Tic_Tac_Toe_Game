@@ -59,6 +59,7 @@ public class TicTacToeGame {
     }
     public static boolean isSpaceFree(char[]board,int index)
     {
-        return board[index]=' ';
+        return board[index]==' ';
     }
+
 }
