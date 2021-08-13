@@ -17,6 +17,8 @@ public class TicTacToeGame {
         System.out.println("Select the index from 1 to 9.");
         int n=scan.nextInt();
         System.out.println(n);
+        System.out.println("Check whether the corners are available or not.");
+        checkCornerIndexes(char board[]);
     }
         else
             System.out.println("Space is full.");
@@ -109,6 +111,25 @@ public class TicTacToeGame {
             System.out.println("Check is true");
         } else {
             System.out.println("Check is false");
+        }
+    }
+
+    public static void checkCornerIndexes(char board[])
+    {
+        if (board.length == 0)
+        {
+            System.out.println("Board is empty.");
+        }
+        else{
+            System.out.println("Board is Not empty.");
+            System.out.println("left top corner: " +
+                    board[1]);
+            System.out.println("right top corner: " +
+                    board[3]);
+            System.out.println("left bottom corner: " +
+                    board[7]);
+            System.out.println("right bottom corner: " +
+                    board[9]);
         }
     }
 
