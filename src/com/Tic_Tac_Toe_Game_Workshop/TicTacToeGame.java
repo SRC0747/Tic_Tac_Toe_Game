@@ -19,6 +19,8 @@ public class TicTacToeGame {
         System.out.println(n);
         System.out.println("Check whether the corners are available or not.");
         checkCornerIndexes(char board[]);
+        System.out.println("Check whether the center or other remaining indexes are available or not.");
+        checkCenterPositions(char board[]);
     }
         else
             System.out.println("Space is full.");
@@ -132,5 +134,18 @@ public class TicTacToeGame {
                     board[9]);
         }
     }
-
+    public static void checkCenterPositions(char board[])
+    {
+        if (board.length == 0)
+        {
+            if (board[5]==0)
+                System.out.println("Center index is free.");
+            else{
+                System.out.println("Print the other available free indexes.");
+                System.out.println(board[2]+","+board[4]+","+board[6]+","+board[8]);
+            }
+        }
+        else
+            System.out.println("Board is full.");
+    }
 }
